@@ -10,7 +10,7 @@ bool Have3(int num)
     
     for (int i=0; i < length; i++)
     {
-        if ((int)s[i] % 3 == 0 && (int)s[i] != 0)
+        if (s[i] == '3' || s[i] == '6' || s[i] == '9' )
             return true; 
     }
 
