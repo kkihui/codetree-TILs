@@ -4,15 +4,17 @@ using namespace std;
 
 int M, D;
 
-bool IsValidDate(int M, int D)
+bool IsValidDate(int m, int d)
 {
-    if (M >= 13 || D >= 32)
+    if (m >= 13 || d >= 32)
         return 0;
-    else if (M == 2 && D >= 29)
+    else if (m == 2 && d >= 29)
         return 0;
-    else if (M == 4 || M == 6 || M == 9 || M == 11)
-        if (D == 31)
+    else if (m == 4 || m == 6 || m == 9 || m == 11)
+        {
+        if (d == 31)
             return 0;
+        }
     else
         return 1;
 }
