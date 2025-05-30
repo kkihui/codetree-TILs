@@ -14,6 +14,7 @@ bool IsValidDate(int m, int d)
         {
         if (d == 31)
             return 0;
+        return 1;
         }
     else
         return 1;
