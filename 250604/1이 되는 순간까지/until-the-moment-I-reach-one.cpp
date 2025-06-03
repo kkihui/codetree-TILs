@@ -3,7 +3,6 @@
 using namespace std;
 
 int N;
-int cnt = 0;
 
 int Until1(int num)
 {
