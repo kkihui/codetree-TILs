@@ -4,7 +4,6 @@ using namespace std;
 
 int n;
 int arr[100];
-int max_value = 0;
 
 int FindArrmax(int num)
 {
