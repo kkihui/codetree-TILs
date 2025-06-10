@@ -36,7 +36,7 @@ int main() {
                     idx = i;
                 else
                 {
-                    if (infos[i].date > infos[i].date)
+                    if (infos[idx].date > infos[i].date)
                         idx = i;
                 }
             }
