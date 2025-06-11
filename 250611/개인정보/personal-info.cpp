@@ -35,11 +35,12 @@ int main()
 {
     for (int i = 0; i < 5; i++)
         cin >> People[i].name >> People[i].height >> People[i].weight;
-
+    cout << fixed;
+    cout.precision(1);
+    
     // name 순 정렬
     sort(People,People+5,cmp1);
     cout << "name" << endl;
-    cout.precision(-2);
     for (int i = 0; i < 5; i++)
         cout << People[i].name << " " << People[i].height << " " << People[i].weight << endl;
 
