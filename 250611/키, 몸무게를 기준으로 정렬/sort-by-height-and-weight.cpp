@@ -39,7 +39,7 @@ int main()
     
     
     sort(People,People+n,cmp);
-    for (int i = 0; i < 5; i++)
+    for (int i = 0; i < n; i++)
         cout << People[i].name << " " << People[i].height << " " << People[i].weight << endl;
     
     return 0;
