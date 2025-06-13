@@ -5,7 +5,7 @@ using namespace std;
 
 int a, b, n;
 
-int ConvertBase(int a, int b, int n)
+long long int ConvertBase(int a, int b, int n)
 {
     int decimal = 0;
     int num, square = 1;
@@ -19,7 +19,7 @@ int ConvertBase(int a, int b, int n)
     }
 
     // 10 진법 to b 진법
-    int res = 0, digit = 1;
+    long long int res = 0, digit = 1;
     while (decimal >= b)
     {
         res += (decimal % b) * digit;
