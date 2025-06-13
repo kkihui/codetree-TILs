@@ -35,7 +35,7 @@ int main() {
     int ans = elapsed_day/7;
     elapsed_day %= 7;
 
-    if (elapsed_day >= remainder)
+    if (elapsed_day > remainder)
         ans += 1;
 
     cout << ans;
