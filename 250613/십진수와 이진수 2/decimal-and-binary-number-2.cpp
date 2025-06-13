@@ -1,9 +1,11 @@
 #include <iostream>
+
 using namespace std;
 
-int Convert2Binary(int d)
+long long int Convert2Binary(int d)
 {
-    int result = 0, digit = 0;
+    long long int result = 0;
+    int digit = 0;
     int arr[20];
 
     while (d >= 2)
@@ -43,7 +45,7 @@ int main() {
     cin >> binary;
 
     int decimal = Convert2Decimal(binary) * 17;
-
+    
     cout << Convert2Binary(decimal);
 
     return 0;
