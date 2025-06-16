@@ -28,7 +28,7 @@ void FillLine()
 int GetAns()
 {
     int ans = 0;
-    for (int i = 0; i < 2001; i++)
+    for (int i = 0; i < 2000; i++)
     {
         if (line[i] > 1)
             ans++;
