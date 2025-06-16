@@ -1,6 +1,6 @@
 #include <iostream>
 
-#define Max_size 200002
+#define Max_size 2000000
 
 using namespace std;
 
