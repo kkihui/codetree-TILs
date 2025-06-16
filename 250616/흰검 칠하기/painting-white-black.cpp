@@ -35,7 +35,7 @@ void FillColor()
             if (dir[i] == 'R')
             {
                 cur = pos + j;
-                if (Tiles[cur].color != 'B' && Tiles[cur].color != 'G')
+                if (Tiles[cur].color != 'B' || Tiles[cur].color != 'G')
                 {
                     Tiles[cur].color = 'B';
                     Tiles[cur].cnt++;
@@ -44,7 +44,7 @@ void FillColor()
             else
             {
                 cur = pos - j;
-                if (Tiles[cur].color != 'W' && Tiles[cur].color != 'G')
+                if (Tiles[cur].color != 'W' || Tiles[cur].color != 'G')
                 {
                     Tiles[cur].color = 'W';
                     Tiles[cur].cnt++;
