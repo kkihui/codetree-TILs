@@ -50,16 +50,15 @@ void FillColor()
                     Tiles[cur].cnt++;
                 }
             }
-            
             // 4번 이상 칠해지면 Gray로 변경
-            if (Tiles[cur].cnt == 4)
+            if (Tiles[cur].cnt >= 4)
                 Tiles[cur].color = 'G';
         }
         // Pos 업데이트
         if (dir[i] == 'R')
-            pos += x[i] - 1;
+            pos += (x[i] - 1);
         else
-            pos -= x[i] - 1;
+            pos -= (x[i] - 1);
     }
 }
 
