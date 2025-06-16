@@ -14,24 +14,15 @@ void FillLine()
 
     for (int i = 0; i < n; i++)
     {
-        if (dir[i] == 'R')
+        if (dir[i] == 'L')
+            pos -= x[i];
+        for (int j = 0; j < x[i]; j++)
         {
-            for (int j = 0; j < x[i]; j++)
-            {
-                pos++;
-                line[pos]++;
-            }
+            pos++;
+            line[pos]++;
         }
-        else
-        {   
+        if (dir[i] == 'L')
             pos -= x[i];
-            for (int j = 0; j < x[i]; j++)
-            {
-                pos++;
-                line[pos]++;
-            }
-            pos -= x[i];
-        }
     }
 }
 
