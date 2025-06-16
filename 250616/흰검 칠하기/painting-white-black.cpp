@@ -55,10 +55,7 @@ void FillColor()
                 Tiles[cur].color = 'G';
         }
         // Pos 업데이트
-        if (dir[i] == 'R')
-            pos += (x[i] - 1);
-        else
-            pos -= (x[i] - 1);
+        pos = cur;
     }
 }
 
