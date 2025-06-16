@@ -14,13 +14,23 @@ void FillLine()
 
     for (int i = 0; i < n; i++)
     {
-        for (int j = 0; j < x[i]; j++)
+        if (dir[i] == 'R')
         {
-            if (dir[i] == 'R')
+            for (int j = 0; j < x[i]; j++)
+            {
                 pos++;
-            else
-                pos--;
-            line[pos]++;
+                line[pos]++;
+            }
+        }
+        else
+        {   
+            pos -= x[i];
+            for (int j = 0; j < x[i]; j++)
+            {
+                pos++;
+                line[pos]++;
+            }
+            pos -= x[i];
         }
     }
 }
@@ -28,7 +38,7 @@ void FillLine()
 int GetAns()
 {
     int ans = 0;
-    for (int i = 0; i < 2000; i++)
+    for (int i = 0; i < 2001; i++)
     {
         if (line[i] > 1)
             ans++;
