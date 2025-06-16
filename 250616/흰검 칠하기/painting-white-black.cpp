@@ -1,6 +1,6 @@
 #include <iostream>
 
-#define Max_size 2000000
+#define Max_size 200002
 
 using namespace std;
 
@@ -8,11 +8,14 @@ class Tile
 {
     public:
         char color;
-        int cnt;
-        Tile (char c = 0, int cnt = 0)
+        int cntb;
+        int cntw;
+
+        Tile (char c = 0, int cntb = 0, int cntw = 0)
         {
             this -> color = c;
-            this -> cnt = cnt;
+            this -> cntb = cntb;
+            this -> cntw = cntw;
         }
 };
 
@@ -38,7 +41,7 @@ void FillColor()
                 if (Tiles[cur].color != 'B' || Tiles[cur].color != 'G')
                 {
                     Tiles[cur].color = 'B';
-                    Tiles[cur].cnt++;
+                    Tiles[cur].cntb++;
                 }
             }
             else
@@ -47,11 +50,11 @@ void FillColor()
                 if (Tiles[cur].color != 'W' || Tiles[cur].color != 'G')
                 {
                     Tiles[cur].color = 'W';
-                    Tiles[cur].cnt++;
+                    Tiles[cur].cntw++;
                 }
             }
             // 4번 이상 칠해지면 Gray로 변경
-            if (Tiles[cur].cnt >= 4)
+            if (Tiles[cur].cntb >= 2 && Tiles[cur].cntw >= 2)
                 Tiles[cur].color = 'G';
         }
         // Pos 업데이트
