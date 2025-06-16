@@ -15,7 +15,7 @@ void Fillblock(int s, int e)
 int Maxblock(int n)
 {
     int ans = 0;
-    for (int i = 0; i < k; i++)
+    for (int i = 0; i < n; i++)
         ans = max(ans,blocks[i]);
     return ans;
 }
