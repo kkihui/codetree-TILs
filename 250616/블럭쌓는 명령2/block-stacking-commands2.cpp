@@ -12,7 +12,7 @@ void Fillblock(int s, int e)
         blocks[i]++;
 }
 
-int Maxblock(int k)
+int Maxblock(int n)
 {
     int ans = 0;
     for (int i = 0; i < k; i++)
@@ -29,7 +29,7 @@ int main() {
     for (int i = 0; i < K; i++)
         Fillblock(A[i],B[i]);
 
-    cout << Maxblock(K);
+    cout << Maxblock(N);
     
     return 0;
 }
