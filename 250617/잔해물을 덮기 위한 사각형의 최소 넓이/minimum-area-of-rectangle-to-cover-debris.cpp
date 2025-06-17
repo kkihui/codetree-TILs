@@ -50,9 +50,9 @@ int getAns()
         }
     }
 
-    if (xs >= xe || ys >= ye)
+    if (xs > xe || ys > ye)
         return 0;
-
+    
     return (xe-xs+1) * (ye-ys+1);
 }
 
