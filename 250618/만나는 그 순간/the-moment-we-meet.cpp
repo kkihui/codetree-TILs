@@ -12,6 +12,7 @@ int t2[1000];
 
 int aPosRec[MAX_TIME] = {0, };
 int bPosRec[MAX_TIME] = {0, };
+int timeMax = 0;
 
 
 void recordPos()
@@ -30,6 +31,7 @@ void recordPos()
             aPosRec[time] = pos;
         }
     }
+    timeMax = max(time,timeMax);
 
     pos = 0, time = 0;
     for (int i = 0; i < m; i++)
@@ -44,11 +46,12 @@ void recordPos()
             bPosRec[time] = pos;
         }
     }
+    timeMax = max(time,timeMax);
 }
 
 int comparePos()
 {
-    for (int i = 1; i < MAX_TIME; i++)
+    for (int i = 1; i <= timeMax; i++)
     {
         if (aPosRec[i] == bPosRec[i])
             return i;
