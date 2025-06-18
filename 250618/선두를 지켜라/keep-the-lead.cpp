@@ -6,15 +6,14 @@ using namespace std;
 
 int n, m, v, t;
 int hour, hourMax;
-double pos, aPosRec[MAX_TIME], bPosRec[MAX_TIME];
+int pos, aPosRec[MAX_TIME], bPosRec[MAX_TIME];
 
 void recordPos(int v, int t, char who)
 {
-    double dist = (double) v/t;
     for (int i = 0; i < t; i++)
     {
         hour++;
-        pos += dist;
+        pos += v;
         if(who == 'A')
             aPosRec[hour] = pos;
         else
@@ -27,16 +26,18 @@ int comparePos()
     char frontRunner = '0';
     int ans = 0;
 
-    for (int i=0; i < hourMax; i++)
+    for (int i=0; i <= hourMax; i++)
     {
         if (aPosRec[i] > bPosRec[i] && frontRunner != 'A')
         {   
-            ans++;
+            if (frontRunner != '0')
+                ans++;
             frontRunner = 'A';
         }
         else if (aPosRec[i] < bPosRec[i] && frontRunner != 'B')
         {   
-            ans++;
+            if (frontRunner != '0')
+                ans++;
             frontRunner = 'B';
         }
     }
