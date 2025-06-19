@@ -38,7 +38,7 @@ void FillGrid()
         if (InRange(nr,nc) && grid[nr][nc] == '\0')
         {
             r = nr; c = nc;
-            grid[r][c] = (num++ % 27) + 'A';
+            grid[r][c] = (num++ % 26) + 'A';
         }
         else
             dir_state = (dir_state + 1) % 4;
