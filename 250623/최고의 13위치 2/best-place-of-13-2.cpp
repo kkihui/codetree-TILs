@@ -21,7 +21,7 @@ int main() {
 
             for (int o = j+3; o < N-2; o++)
             {
-                coin_sum_2 == arr[i][o] + arr[i][o+1] + arr[i][o+2];
+                coin_sum_2 = arr[i][o] + arr[i][o+1] + arr[i][o+2];
                 ans = max(ans, coin_sum_1 + coin_sum_2);
             }
 
