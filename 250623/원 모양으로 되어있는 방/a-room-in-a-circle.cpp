@@ -17,7 +17,7 @@ int main() {
     for (int i = 0; i < n; i++)
         cin >> a[i];
 
-    int ans = 100300;
+    int ans = 1006009;
     // start i th room
     for (int i = 0; i < n; i++)
     {
