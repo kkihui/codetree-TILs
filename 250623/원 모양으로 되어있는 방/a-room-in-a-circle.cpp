@@ -1,4 +1,5 @@
 #include <iostream>
+#include <climits>
 
 using namespace std;
 
@@ -17,7 +18,7 @@ int main() {
     for (int i = 0; i < n; i++)
         cin >> a[i];
 
-    int ans = 1006009;
+    int ans = INT_MAX;
     // start i th room
     for (int i = 0; i < n; i++)
     {
