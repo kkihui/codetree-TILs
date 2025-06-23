@@ -21,7 +21,7 @@ bool IsNotCarry(int n1, int n2, int n3)
     int max_digit = CalculateDigit(max(max(n1,n2),n3));
     for (int i = 0; i < max_digit; i++)
     {
-        if ((n1%10 + n2%10 + n3%10) > 10)
+        if ((n1%10 + n2%10 + n3%10) >= 10)
             return false;
         n1 /= 10;
         n2 /= 10;
