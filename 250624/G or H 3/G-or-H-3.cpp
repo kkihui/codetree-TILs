@@ -7,8 +7,7 @@ const int kSize = 10001;
 int main() 
 {
     char pos[kSize] = {'0', };
-    int n, k, idx;
-    int idx_max = 0, max_sum = 0;
+    int n, k, idx, max_sum = 0;
     char c;
 
     cin >> n >> k;
@@ -17,10 +16,9 @@ int main()
     {
         cin >> idx >> c;
         pos[idx] = c;
-        idx_max = max(idx_max,idx);
     }
 
-    for (int i = 0; i <= idx_max - k; i++)
+    for (int i = 0; i < kSize - k; i++)
     {
         int sum = 0;
         for (int j = 0; j <= k; j++)
