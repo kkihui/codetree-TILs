@@ -23,7 +23,7 @@ int main()
                 avg += arr[i+j];
             avg /= size;
 
-            for (int idx = 0; idx < n; idx++)
+            for (int idx = i; idx < i + size; idx++)
             {
                 if (avg == arr[idx])
                 {
