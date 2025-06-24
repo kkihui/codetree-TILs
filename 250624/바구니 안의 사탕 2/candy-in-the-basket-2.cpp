@@ -17,12 +17,21 @@ int main()
     }
 
     int max_sum = 0;
-    for (int c = K; c <= (100 - K); c++)
+    
+    if (K >= 50)
     {
-        int sum = 0;
-        for (int i = -K; i <= K; i++)
-            sum += pos[c+i];
-        max_sum = max(max_sum,sum);
+        for (int i = 0; i <= 100; i++)
+            max_sum += pos[i];
+    }
+    else
+    {
+        for (int c = K; c <= (100 - K); c++)
+        {
+            int sum = 0;
+            for (int i = -K; i <= K; i++)
+                sum += pos[c+i];
+            max_sum = max(max_sum,sum);
+        }
     }
 
     cout << max_sum << endl;
