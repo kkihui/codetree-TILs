@@ -12,7 +12,7 @@ int main()
     for (int i = 0; i < n; i++)
         cin >> arr[i];
 
-    for (int i = 0; i < n-k; i++)
+    for (int i = 0; i <= n-k; i++)
     {
         int sum = 0;
         for (int j = 0; j < k; j++)
