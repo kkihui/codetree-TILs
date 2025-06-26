@@ -35,6 +35,11 @@ tuple<int,int> DoNumBaseBall(int n1, int n2)
     return tuple<int,int>(cnt1,cnt2);
 }
 
+bool IsDiff(int n1, int n2, int n3)
+{
+    return (n1 != n2) && (n2 != n3) && (n3 != n1);
+}
+
 int main() 
 {
     cin >> n;
@@ -61,7 +66,7 @@ int main()
                         break;
                     }
                 }
-                if (is_can)
+                if (is_can && IsDiff(i,j,k))
                     cnt++;
             }
         }
