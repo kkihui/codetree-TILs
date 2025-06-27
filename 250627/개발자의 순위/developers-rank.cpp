@@ -36,9 +36,9 @@ int main()
         for (int j = 0; j < n; j++) cin >> arr[i][j];
     
     int ans = 0;
-    for (int a = 0; a < n; a++)
+    for (int a = 1; a <= n; a++)
     {
-        for (int b = 0; b < n; b++)
+        for (int b = 1; b <= n; b++)
         {
             if (a != b)
             {
