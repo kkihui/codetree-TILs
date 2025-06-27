@@ -34,7 +34,7 @@ class GiftInfo
 
 bool cmp(GiftInfo a, GiftInfo b)
 {
-    return a.price < b.price;
+    return a.total < b.total;
 }
 
 GiftInfo gifts[1000]; 
